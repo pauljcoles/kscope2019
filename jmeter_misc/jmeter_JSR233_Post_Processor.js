@@ -34,6 +34,8 @@ function getValue(page,id,v){
           mypage = mypage.substring(end+1);
           start = mypage.indexOf(find);
   }
+  
+  ret = ret.replace("&#x2F;", "/");
   OUT.println(id + "=" + ret);
   return  ret == null ? v : ret ;
 }
